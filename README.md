@@ -1,24 +1,24 @@
-# gas-babel-gulp
+# gas trello library
 
-## how to use
+This library is tool for Google Apps Script and Trello.
 
+# how to use
 
 ## get trello token
 
 * https://trello.com/app-key
 
-## get slack token
-* https://api.slack.com/docs/oauth-test-tokens
+## sample code
 
-
-## set script property
 
 ```js
-function setProperties() {
-    PropertiesService.getScriptProperties().setProperty("trello_key", "your-trello-key");
-    PropertiesService.getScriptProperties().setProperty("trello_token", "your-trello-token");
-    PropertiesService.getScriptProperties().setProperty("trello_access_token", "your-trello-access-token");
+function usage(){
+    var key = "your-trello-key";
+    var token = "your-trello-token";
 
-    PropertiesService.getScriptProperties().setProperty("slack_token", "your-slack-token");
+    var trello = new Trello(key, token);
+    trello.getLists("your-trello-boardid");
+    trello.addCard("your-board-list-id", "test", "test decs");
 }
+
 ```
