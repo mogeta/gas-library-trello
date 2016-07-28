@@ -11,7 +11,7 @@ export default class {
     }
 
 
-    mergeStoryPoint(cards){
+    getListStoryPoint(cards){
         var total = 0;
         var regexp = /\((.*)\)/;
 
