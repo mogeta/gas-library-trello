@@ -10,7 +10,6 @@ export default class {
         this.accessToken = token;
     }
 
-
     getListStoryPoint(cards){
         var total = 0;
         var regexp = /\((.*)\)/;
